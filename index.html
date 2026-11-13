@@ -361,7 +361,7 @@ if('IntersectionObserver' in window){const revealObserver=new IntersectionObserv
 $('#menuToggle').onclick=()=>$('#nav').classList.toggle('open');
 $('#nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
 document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;document.querySelectorAll('#galleryGrid .media-card').forEach(c=>c.style.display=f==='all'||c.dataset.kind===f?'':'none')});
-$('#adminOpen').onclick=()=>{if(!supabase){toast('Сначала настройте config.js по инструкции');return}$('#adminModal').classList.add('open');refreshAuth()};
+$('#adminOpen').onclick=()=>{window.location.href='admin.html'};
 $('#adminClose').onclick=()=>$('#adminModal').classList.remove('open');
 $('#adminModal').onclick=e=>{if(e.target.id==='adminModal')$('#adminModal').classList.remove('open')};
 function setAdminUI(user){currentUser=user;$('#adminLogin').hidden=!!user;$('#adminTools').hidden=!user;$('#adminOpen').textContent=user?'УПРАВЛЕНИЕ • ВХОД':'УПРАВЛЕНИЕ';}
