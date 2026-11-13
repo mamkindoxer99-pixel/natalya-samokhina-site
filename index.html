@@ -16,6 +16,14 @@
 @media(max-width:850px){nav{display:none;position:absolute;top:81px;left:0;right:0;background:#090909;border-bottom:1px solid var(--line);padding:22px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu-toggle{display:block}.header-cta{display:none}.hero{grid-template-columns:1fr;min-height:unset}.hero-copy{padding:72px 28px 15px}.hero-photo{min-height:420px;height:55vh}.hero-photo img{height:100%;max-width:100%}.hero-photo:after{background:linear-gradient(0deg,#080808,transparent 35%),linear-gradient(180deg,#080808 0%,transparent 20%)}.about-grid{grid-template-columns:1fr}.about-image{height:420px;max-width:520px}.features{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr 1fr}.contact-photo{grid-column:1/-1;height:200px}.section{padding-top:68px;padding-bottom:68px}}
 @media(max-width:520px){.gallery-top{align-items:flex-start;flex-direction:column}.gallery-grid{gap:9px}.media-card{aspect-ratio:3/4}.contact{grid-template-columns:1fr}.contact-photo{grid-column:auto}.repertoire-card{padding:24px;align-items:flex-start}.section-heading{font-size:39px}footer{flex-direction:column}}
 
+
+/* Elegant contact buttons */
+.contact-data{gap:13px}
+.contact-data a.contact-link{display:flex;align-items:center;gap:15px;padding:15px 17px;border:1px solid rgba(255,255,255,.13);border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 12px 32px rgba(0,0,0,.18);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);transition:transform .3s,border-color .3s,background .3s}
+.contact-data a.contact-link:hover{transform:translateY(-3px);border-color:rgba(240,209,138,.5);background:linear-gradient(135deg,rgba(214,170,76,.15),rgba(255,255,255,.045))}
+.contact-icon{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,rgba(240,209,138,.22),rgba(214,170,76,.07));border:1px solid rgba(240,209,138,.25);color:var(--gold2);font-size:21px;font-weight:600}
+.contact-link-copy{display:flex;flex-direction:column;gap:5px;min-width:0}.contact-link-copy strong{font-size:12px;letter-spacing:.7px;color:var(--gold2);font-weight:600}.contact-link-copy small{font-size:11px;color:var(--muted);overflow-wrap:anywhere}.contact-arrow{margin-left:auto;color:var(--gold);font-size:17px;opacity:.75}
+
 /* Liquid Glass inspired visual layer */
 :root{--glass:rgba(255,255,255,.055);--glass-hi:rgba(255,255,255,.095);--glass-line:rgba(255,255,255,.13);--glass-shadow:0 22px 70px rgba(0,0,0,.38)}
 body{background:radial-gradient(ellipse at 50% -15%,rgba(100,100,120,.13),transparent 42%),#07080b}
@@ -378,7 +386,27 @@ document.addEventListener('click',e=>{const card=e.target.closest('.media-card')
 function openLightbox(src,kind){const holder=$('#lightboxContent');holder.innerHTML='';const el=document.createElement(kind==='video'?'video':'img');el.src=src;if(kind==='video'){el.controls=true;el.autoplay=true}holder.append(el);$('#lightbox').classList.add('open')}
 $('#lightboxClose').onclick=()=>{$('#lightbox').classList.remove('open');$('#lightboxContent').innerHTML=''};
 $('#mediaInput').onchange=async e=>{const files=[...e.target.files];for(const file of files){if(file.size>50*1024*1024){toast(file.name+' больше 50 МБ — пропущен');continue}if(!file.type.startsWith('image/')&&!file.type.startsWith('video/'))continue;const path=Date.now()+'_'+Math.random().toString(36).slice(2,8)+'_'+safeName(file.name);const {error}=await sbClient.storage.from('media').upload(path,file,{cacheControl:'3600',upsert:false,contentType:file.type});if(error){toast('Ошибка загрузки '+file.name);console.error(error)}else toast('Загружено: '+file.name)}e.target.value='';await renderMedia()};
-async function loadContacts(){let c={email:DEFAULT_EMAIL};if(sbClient){const {data,error}=await sbClient.from('site_settings').select('key,value');if(!error)(data||[]).forEach(x=>c[x.key]=x.value);if(!c.email)c.email=DEFAULT_EMAIL}$('#phoneInput').value=c.phone||'';$('#emailInput').value=c.email||DEFAULT_EMAIL;$('#vkInput').value=c.vk||'';const box=$('#contactData');box.innerHTML='';if(c.phone){const a=document.createElement('a');a.href='tel:'+c.phone.replace(/[^\d+]/g,'');a.textContent='☎  '+c.phone;box.append(a)}if(c.email){const a=document.createElement('a');a.href='mailto:'+c.email;a.textContent='✉  '+c.email;box.append(a)}if(c.vk){const a=document.createElement('a');a.href=c.vk;a.target='_blank';a.rel='noopener noreferrer';a.textContent='ВКонтакте ↗';box.append(a)}$('#contactCta').textContent='СВЯЗАТЬСЯ';$('#contactCta').href=c.phone?'tel:'+c.phone.replace(/[^\d+]/g,''):c.email?'mailto:'+c.email:c.vk||'#'}
+async function loadContacts(){
+ let c={email:DEFAULT_EMAIL,vk:'https://vk.ru/nataly_okuneva'};
+ if(sbClient){const {data,error}=await sbClient.from('site_settings').select('key,value');if(!error)(data||[]).forEach(x=>c[x.key]=x.value)}
+ if(!c.email)c.email=DEFAULT_EMAIL;
+ if(!c.vk)c.vk='https://vk.ru/nataly_okuneva';
+ $('#phoneInput').value=c.phone||'';
+ $('#emailInput').value=c.email;
+ $('#vkInput').value=c.vk;
+ const box=$('#contactData');box.innerHTML='';
+ const addContact=(href,title,subtitle,icon,external=false)=>{
+   const a=document.createElement('a');a.className='contact-link';a.href=href;
+   if(external){a.target='_blank';a.rel='noopener noreferrer'}
+   a.innerHTML='<span class="contact-icon">'+icon+'</span><span class="contact-link-copy"><strong>'+title+'</strong><small>'+subtitle+'</small></span><span class="contact-arrow">↗</span>';
+   box.append(a);
+ };
+ if(c.email)addContact('mailto:'+c.email,'Электронная почта',c.email,'✉');
+ if(c.vk)addContact(c.vk,'ВКонтакте','Страница Натальи','ᴠκ',true);
+ if(c.phone)addContact('tel:'+c.phone.replace(/[^\d+]/g,''),'Телефон',c.phone,'☎');
+ $('#contactCta').textContent='НАПИСАТЬ НА ПОЧТУ';
+ $('#contactCta').href='mailto:'+c.email;
+}
 $('#saveContacts').onclick=async()=>{const vk=$('#vkInput').value.trim();if(vk&&!/^https:\/\/(www\.)?vk\.com\//i.test(vk)){toast('Укажите полную ссылку вида https://vk.com/...');return}for(const [key,value] of [['phone',$('#phoneInput').value.trim()],['email',$('#emailInput').value.trim()],['vk',vk]]){const {error}=await sbClient.from('site_settings').upsert({key,value},{onConflict:'key'});if(error){toast('Не удалось сохранить контакты');return}}await loadContacts();toast('Контакты сохранены')};
 if(sbClient){sbClient.auth.onAuthStateChange((_event,session)=>{setAdminUI(session?.user||null)});refreshAuth()}else{ loadContacts(); }
 </script>
