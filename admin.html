@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0e">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Админ-панель — Наталья Самохина</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="./"><span>НАТАЛЬЯ САМОХИНА</span><small>АДМИНИСТРИРОВАНИЕ САЙТА</small></a>
+      <a class="back-link" href="./">← На сайт</a>
+    </header>
+
+    <section id="loginView" class="login-wrap">
+      <div class="login-card glass">
+        <div class="eyebrow">ЗАКРЫТЫЙ ДОСТУП</div>
+        <div class="monogram">NS</div>
+        <h1>Добро пожаловать</h1>
+        <p class="sub">Войдите, чтобы управлять фотографиями и видео на сайте Натальи.</p>
+        <form id="loginForm">
+          <label class="field"><span>Электронная почта</span><input id="email" type="email" autocomplete="username" placeholder="admin@example.com" required></label>
+          <label class="field"><span>Пароль</span><input id="password" type="password" autocomplete="current-password" placeholder="Ваш пароль" required></label>
+          <button class="primary-btn" id="loginButton" type="submit">Войти в панель <span>↗</span></button>
+          <p class="form-message" id="loginMessage" role="alert"></p>
+        </form>
+        <div class="secure-note"><span class="lock">▣</span> Доступ только для владельца сайта</div>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="dashboard" hidden>
+      <div class="welcome-row">
+        <div><div class="eyebrow">МЕДИАБИБЛИОТЕКА</div><h1>Управление контентом</h1><p class="sub">Добавляйте новые фотографии и видео или удаляйте старые.</p></div>
+        <button class="ghost-btn" id="logoutButton" type="button">Выйти ↗</button>
+      </div>
+      <section class="upload-card glass">
+        <div class="upload-symbol">＋</div>
+        <div class="upload-copy"><h2>Добавить материалы</h2><p>Перетащите файлы сюда или выберите их на устройстве.</p><small>JPG, PNG, WEBP, GIF, AVIF, MP4, WEBM, MOV · до 50 МБ на файл</small></div>
+        <label class="primary-btn file-button">Выбрать файлы<input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif,video/mp4,video/webm,video/quicktime" multiple></label>
+        <div class="drop-overlay" id="dropOverlay">Отпустите файлы для загрузки</div>
+      </section>
+      <div class="library-heading"><div><div class="eyebrow">ВАШИ ФАЙЛЫ</div><h2>Галерея</h2></div><div class="library-tools"><span id="fileCount">0 файлов</span><button class="ghost-btn" id="refreshButton" type="button">↻ Обновить</button></div></div>
+      <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+      <div id="mediaGrid" class="media-grid"></div>
+      <div id="emptyState" class="empty-state" hidden><div>✧</div><h3>Пока здесь пусто</h3><p>Загрузите первые фотографии или видео — они появятся в галерее сайта.</p></div>
+    </section>
+    <footer>© Наталья Самохина <span>ПАНЕЛЬ УПРАВЛЕНИЯ</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
