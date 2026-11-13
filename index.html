@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Наталья Самохина — вокал, эстрадная музыка и выступления на ваших мероприятиях.">
+<title>Наталья Самохина — певица</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--panel:#101010;--gold:#d6aa4c;--gold2:#f0d18a;--white:#f4f0e9;--muted:#b7b0a6;--line:rgba(214,170,76,.28);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--white);font-family:var(--sans);font-weight:400}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.site-header{height:82px;position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,76px)}.brand{font-family:var(--serif);color:var(--gold2);font-size:26px;line-height:.85;letter-spacing:2px}.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:4px;margin-bottom:7px;color:var(--gold)}nav{display:flex;gap:clamp(16px,3vw,42px);align-items:center}nav a{font-size:11px;letter-spacing:1.5px;color:#c9c4bd;transition:.25s}nav a:hover,nav a.active{color:var(--gold2)}.outline-btn,.gold-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border:1px solid var(--line);letter-spacing:1.4px;font-size:11px;text-transform:uppercase;transition:.3s;cursor:pointer;background:transparent;color:var(--gold2)}.outline-btn:hover{background:rgba(214,170,76,.1);border-color:var(--gold)}.gold-btn{background:linear-gradient(110deg,#f1d48e,#b8872c);color:#100d07;border:0;font-weight:600}.gold-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--gold);padding:9px 12px}
+.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,#332514 0%,#17120c 30%,#080808 70%)}.hero-copy{padding:100px 0 90px clamp(28px,7vw,110px);align-self:center;position:relative;z-index:2}.eyebrow{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-size:11px}.hero h1{font-family:var(--serif);font-size:clamp(58px,8vw,112px);line-height:.82;font-weight:500;letter-spacing:1px;margin:22px 0}.hero h1 span{display:block;color:var(--gold2);font-size:.38em;letter-spacing:7px;margin-bottom:20px}.hero-sub{font-family:var(--serif);font-size:clamp(30px,4vw,48px);line-height:1.05;margin:34px 0 18px;max-width:520px}.hero-desc{font-size:14px;line-height:2;color:var(--muted);max-width:420px;margin-bottom:34px}.hero-photo{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:650px}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080808 0%,transparent 28%),linear-gradient(0deg,#080808 0%,transparent 28%);pointer-events:none}.hero-photo img{height:92%;max-width:95%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 15px 40px #0008);mask-image:linear-gradient(to bottom,black 85%,transparent 100%);animation:rise 1.2s ease both}@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}.section{padding:92px clamp(22px,6vw,90px);border-top:1px solid var(--line)}.section-heading{font-family:var(--serif);font-size:clamp(36px,4vw,54px);font-weight:500;color:var(--gold2);margin:0 0 12px;letter-spacing:2px}.section-kicker{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}.gold-rule{width:72px;height:1px;background:var(--gold);margin:22px 0 28px}.about-grid{display:grid;grid-template-columns:1fr .9fr;gap:8%;align-items:center}.about-copy{max-width:600px}.about-copy p{font-size:14px;line-height:2.05;color:#c4bdb3}.about-image{height:490px;position:relative;border:1px solid var(--line);overflow:hidden}.about-image img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.85)}.about-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08080866,transparent 45%)}.features{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-top:48px}.feature{padding:28px;border-right:1px solid var(--line)}.feature:last-child{border:0}.feature b{display:block;color:var(--gold2);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}.feature p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}.repertoire{background:linear-gradient(110deg,#0c0b09,#11100e)}.repertoire-card{max-width:850px;padding:38px;border:1px solid var(--line);background:linear-gradient(135deg,#17130d,#0c0c0c);display:flex;align-items:center;gap:28px}.music-icon{font-size:42px;color:var(--gold)}.repertoire-card h3{font-family:var(--serif);font-size:32px;font-weight:500;margin:0 0 8px}.repertoire-card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.gallery-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.filters{display:flex;gap:8px}.filter{background:transparent;border:1px solid var(--line);color:var(--muted);padding:10px 16px;font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer}.filter.active,.filter:hover{color:var(--gold2);border-color:var(--gold)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.media-card{position:relative;aspect-ratio:4/5;background:#171411;border:1px solid var(--line);overflow:hidden;cursor:pointer}.media-card img,.media-card video{width:100%;height:100%;object-fit:cover;transition:transform .6s;display:block}.media-card:hover img,.media-card:hover video{transform:scale(1.045)}.media-card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#0008);pointer-events:none}.media-card .play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border:1px solid #f0d18a;border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:19px;background:#09090988}.empty-gallery{grid-column:1/-1;border:1px dashed var(--line);padding:45px;text-align:center;color:var(--muted);font-size:13px;line-height:1.9}.contact{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;align-items:center}.contact h2{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:500;color:var(--gold2);line-height:1.1}.contact p{font-size:13px;line-height:1.9;color:var(--muted)}.contact-photo{height:220px;overflow:hidden;border:1px solid var(--line)}.contact-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%}.contact-data{display:flex;flex-direction:column;gap:12px;color:var(--muted);font-size:13px}.contact-data a{color:var(--gold2)}footer{padding:24px clamp(22px,6vw,90px);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#777;font-size:10px;letter-spacing:.5px}.admin-launch{position:fixed;right:16px;bottom:16px;z-index:30;opacity:.22;font-size:10px;padding:8px 11px}.admin-launch:hover{opacity:1}.modal{position:fixed;inset:0;z-index:50;background:#000b;display:none;place-items:center;padding:18px}.modal.open{display:grid}.modal-box{width:min(560px,100%);max-height:90vh;overflow:auto;background:#11100e;border:1px solid var(--gold);padding:28px;box-shadow:0 20px 80px #000}.modal-box h2{font-family:var(--serif);font-size:34px;color:var(--gold2);font-weight:500;margin:0 0 8px}.modal-box p,.hint{color:var(--muted);font-size:12px;line-height:1.8}.field{display:block;margin:18px 0}.field span{display:block;color:var(--gold2);font-size:10px;letter-spacing:1px;margin-bottom:8px;text-transform:uppercase}.field input{width:100%;background:#080808;border:1px solid var(--line);color:white;padding:13px}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.close-modal{float:right;background:none;border:0;color:var(--gold);font-size:24px;cursor:pointer}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#201a10;border:1px solid var(--gold);padding:12px 18px;color:var(--gold2);font-size:12px;z-index:80;display:none}.toast.show{display:block}.lightbox{position:fixed;inset:0;z-index:60;background:#000e;display:none;place-items:center;padding:25px}.lightbox.open{display:grid}.lightbox-content{max-width:min(1000px,95vw);max-height:85vh}.lightbox-content img,.lightbox-content video{max-width:100%;max-height:85vh;display:block}.lightbox button{position:absolute;right:25px;top:18px;background:none;border:0;color:white;font-size:32px;cursor:pointer}
+@media(max-width:850px){nav{display:none;position:absolute;top:81px;left:0;right:0;background:#090909;border-bottom:1px solid var(--line);padding:22px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu-toggle{display:block}.header-cta{display:none}.hero{grid-template-columns:1fr;min-height:unset}.hero-copy{padding:72px 28px 15px}.hero-photo{min-height:420px;height:55vh}.hero-photo img{height:100%;max-width:100%}.hero-photo:after{background:linear-gradient(0deg,#080808,transparent 35%),linear-gradient(180deg,#080808 0%,transparent 20%)}.about-grid{grid-template-columns:1fr}.about-image{height:420px;max-width:520px}.features{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr 1fr}.contact-photo{grid-column:1/-1;height:200px}.section{padding-top:68px;padding-bottom:68px}}
+@media(max-width:520px){.gallery-top{align-items:flex-start;flex-direction:column}.gallery-grid{gap:9px}.media-card{aspect-ratio:3/4}.contact{grid-template-columns:1fr}.contact-photo{grid-column:auto}.repertoire-card{padding:24px;align-items:flex-start}.section-heading{font-size:39px}footer{flex-direction:column}}
+
+/* Liquid Glass inspired visual layer */
+:root{--glass:rgba(255,255,255,.055);--glass-hi:rgba(255,255,255,.095);--glass-line:rgba(255,255,255,.13);--glass-shadow:0 22px 70px rgba(0,0,0,.38)}
+body{background:radial-gradient(ellipse at 50% -15%,rgba(100,100,120,.13),transparent 42%),#07080b}
+.site-header{background:rgba(9,10,14,.66);backdrop-filter:blur(28px) saturate(155%);-webkit-backdrop-filter:blur(28px) saturate(155%);border-bottom:1px solid var(--glass-line);box-shadow:0 8px 30px #0003}
+.brand{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s}.brand:hover{transform:translateY(-2px);filter:drop-shadow(0 0 12px #d6aa4c66)}
+nav a{position:relative;padding:12px 2px;transition:color .35s,transform .35s}nav a:after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:1px;background:linear-gradient(90deg,var(--gold),#fff0);transition:right .4s cubic-bezier(.2,.8,.2,1)}nav a:hover{transform:translateY(-2px)}nav a:hover:after,nav a.active:after{right:0}
+.hero{background:radial-gradient(ellipse at 75% 40%,rgba(102,83,118,.26),transparent 40%),radial-gradient(ellipse at 20% 90%,rgba(49,67,91,.18),transparent 45%),#08090d}
+.hero-photo img{filter:drop-shadow(0 20px 55px #000b);transition:transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1.2s}.hero-photo:hover img{transform:scale(1.025) translateY(-5px);filter:drop-shadow(0 24px 60px #000d)}
+.welcome-line{font-size:clamp(12px,1.15vw,15px);letter-spacing:2.8px;text-transform:uppercase;color:#f3dfb0;opacity:0;transform:translateY(14px);filter:blur(7px);animation:welcomeReveal 2.7s cubic-bezier(.16,1,.3,1) .35s forwards;margin-bottom:26px;text-shadow:0 0 28px #d6aa4c35}
+@keyframes welcomeReveal{0%{opacity:0;transform:translateY(14px);filter:blur(7px);letter-spacing:7px}100%{opacity:1;transform:translateY(0);filter:blur(0);letter-spacing:2.8px}}
+.outline-btn,.gold-btn,.filter,.menu-toggle{border-radius:999px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,background .35s,filter .35s}
+.outline-btn{background:rgba(255,255,255,.035);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:rgba(240,209,138,.35);box-shadow:inset 0 1px 0 #ffffff12,0 8px 24px #0002}
+.gold-btn{box-shadow:inset 0 1px 0 #ffffff88,0 12px 30px rgba(181,137,49,.17)}
+.outline-btn:hover,.gold-btn:hover,.filter:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 14px 38px #0006,0 0 25px rgba(214,170,76,.12)}
+.outline-btn:active,.gold-btn:active,.filter:active,.menu-toggle:active{transform:scale(.96);filter:brightness(1.12)}
+.section{position:relative}.section-heading{letter-spacing:2.5px}
+.about-image,.contact-photo,.media-card,.feature,.repertoire-card{border-radius:28px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:var(--glass-shadow);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.about-image img,.contact-photo img{transition:transform 1s cubic-bezier(.2,.8,.2,1),filter .8s}.about-image:hover img,.contact-photo:hover img{transform:scale(1.045);filter:saturate(1.08)}
+.features{border:0;gap:14px}.feature{border:1px solid var(--glass-line)!important;padding:28px;border-radius:24px;transition:transform .45s cubic-bezier(.2,.8,.2,1),background .4s,border-color .4s}.feature:hover{transform:translateY(-7px);background:rgba(255,255,255,.075);border-color:rgba(240,209,138,.32)!important}
+.repertoire{background:radial-gradient(ellipse at 70% 20%,rgba(92,75,110,.13),transparent 50%),#090a0e}
+.repertoire-card{border-radius:30px;padding:40px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 #ffffff17,var(--glass-shadow)}
+.gallery-grid{gap:20px}.media-card{border-radius:24px;transition:transform .55s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .4s}.media-card:hover{transform:translateY(-7px);border-color:rgba(240,209,138,.55);box-shadow:0 25px 65px #0009,0 0 28px #d6aa4c18}.media-card .play{border-radius:50%;backdrop-filter:blur(18px);background:rgba(8,9,13,.48);box-shadow:inset 0 1px 0 #ffffff35,0 8px 25px #0007;transition:transform .4s,background .4s}.media-card:hover .play{transform:translate(-50%,-50%) scale(1.12);background:rgba(214,170,76,.2)}
+.filter{border-radius:999px;padding:11px 18px;background:rgba(255,255,255,.035);backdrop-filter:blur(14px)}
+.contact h2{text-shadow:0 8px 35px #000}.contact-data a{padding:12px 16px;border:1px solid var(--glass-line);border-radius:16px;background:rgba(255,255,255,.035);transition:transform .3s,background .3s}.contact-data a:hover{transform:translateX(5px);background:rgba(255,255,255,.09)}
+.modal{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;transition:opacity .35s}.modal.open{opacity:1}.modal-box{border-radius:30px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(35,36,45,.9),rgba(12,13,18,.94));backdrop-filter:blur(35px) saturate(150%);-webkit-backdrop-filter:blur(35px) saturate(150%);box-shadow:0 30px 100px #000b,inset 0 1px 0 #ffffff18;animation:modalIn .45s cubic-bezier(.16,1,.3,1)}@keyframes modalIn{from{opacity:0;transform:translateY(22px) scale(.96);filter:blur(8px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.field input{border-radius:15px;background:rgba(0,0,0,.28);border:1px solid var(--glass-line);transition:border-color .3s,box-shadow .3s}.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(214,170,76,.12)}
+.admin-launch{opacity:.72;border-radius:999px;background:rgba(20,21,28,.72);backdrop-filter:blur(20px);box-shadow:0 8px 35px #0007}.admin-launch:hover{opacity:1}
+.lightbox{backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.lightbox-content img,.lightbox-content video{border-radius:22px;box-shadow:0 25px 90px #000b}
+footer{background:rgba(255,255,255,.018)}
+.reveal{opacity:0;transform:translateY(28px);filter:blur(5px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1),filter .9s}.reveal.is-visible{opacity:1;transform:none;filter:none}
+@media(max-width:850px){nav{background:rgba(12,13,18,.94);backdrop-filter:blur(28px);border-radius:0 0 24px 24px;padding:22px 28px}.features{gap:10px}.feature{border-bottom:1px solid var(--glass-line)!important}.welcome-line{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Дополнительные блоки: четыре стеклянные карточки и музыкальная секция */
+.features{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:54px}
+.feature{min-height:190px;padding:27px 23px;display:flex;flex-direction:column;gap:17px}
+.feature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;color:var(--gold2);background:linear-gradient(145deg,rgba(240,209,138,.16),rgba(255,255,255,.025));border:1px solid rgba(240,209,138,.23);box-shadow:inset 0 1px 0 #ffffff20}
+.feature-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.feature b{font-size:11px;line-height:1.5;letter-spacing:1.15px;margin:0}
+.feature p{font-size:12px;line-height:1.85}
+.music-showcase{display:grid;grid-template-columns:minmax(250px,.85fr) 1.15fr;gap:34px;align-items:center;max-width:1120px;padding:18px;border:1px solid var(--glass-line);border-radius:32px;background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.018));box-shadow:var(--glass-shadow);backdrop-filter:blur(20px)}
+.music-showcase img{width:100%;height:390px;object-fit:cover;object-position:center 28%;border-radius:24px;display:block}
+.music-showcase-copy{padding:24px 30px 24px 0}
+.music-showcase-copy h3{font-family:var(--serif);font-size:clamp(30px,3vw,43px);font-weight:500;color:var(--gold2);margin:0 0 16px}
+.music-showcase-copy p{font-size:13px;line-height:2;color:var(--muted);max-width:650px}
+.music-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.music-tags span{padding:10px 14px;border:1px solid var(--glass-line);border-radius:999px;background:rgba(255,255,255,.035);font-size:10px;letter-spacing:.7px;color:#e8d7b1}
+@media(max-width:1000px){.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.features{grid-template-columns:1fr}.feature{min-height:unset}.music-showcase{grid-template-columns:1fr;padding:12px;gap:8px}.music-showcase img{height:340px}.music-showcase-copy{padding:18px 14px 22px}}
+
+
+
+/* Responsive refinement: tighter rhythm and balanced layouts on desktop, laptop and phones */
+html { scroll-padding-top: 76px; }
+body { overflow-x: hidden; }
+.site-header { height: 74px; padding-inline: clamp(18px, 3.6vw, 58px); gap: 18px; }
+nav { gap: clamp(12px, 1.9vw, 28px); }
+nav a { font-size: clamp(9px, .78vw, 11px); letter-spacing: 1.15px; white-space: nowrap; }
+.header-cta { white-space: nowrap; padding-inline: 20px; min-height: 44px; }
+.hero { min-height: min(690px, calc(100svh - 74px)); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.hero-copy { padding: clamp(42px, 6vw, 78px) 0 clamp(42px, 6vw, 78px) clamp(24px, 5.4vw, 82px); }
+.hero-photo { min-height: min(690px, calc(100svh - 74px)); }
+.hero-sub { margin-top: 24px; margin-bottom: 12px; }
+.hero-desc { line-height: 1.75; margin-bottom: 24px; }
+.welcome-line { margin-bottom: 18px; }
+.section { padding: clamp(48px, 5.4vw, 72px) clamp(20px, 5vw, 72px); }
+.section-heading { margin-bottom: 8px; }
+.gold-rule { margin: 15px 0 20px; }
+.about-grid { grid-template-columns: minmax(0, 1fr) minmax(280px, .88fr); gap: clamp(24px, 4vw, 54px); }
+.about-copy { max-width: 660px; }
+.about-copy p { font-size: 13px; line-height: 1.82; margin: 0 0 13px; }
+.about-image { height: clamp(330px, 37vw, 450px); }
+.features { margin-top: 28px; gap: 12px; }
+.feature { min-height: 156px; padding: 21px 19px; gap: 12px; }
+.feature-icon { width: 42px; height: 42px; }
+.feature-icon svg { width: 23px; height: 23px; }
+.feature b { font-size: 10px; letter-spacing: .9px; }
+.feature p { font-size: 11px; line-height: 1.65; }
+.music-showcase { gap: 24px; padding: 14px; }
+.music-showcase img { height: clamp(290px, 30vw, 370px); }
+.music-showcase-copy { padding: 18px 22px 18px 0; }
+.music-showcase-copy p { line-height: 1.75; }
+.music-tags { margin-top: 15px; }
+.gallery-top { margin-bottom: 22px; }
+.gallery-grid { gap: 14px; }
+.contact { gap: clamp(18px, 2.5vw, 32px); }
+.contact-photo { height: 200px; }
+footer { padding-block: 18px; }
+
+@media (min-width: 1500px) {
+  .hero { min-height: 700px; }
+  .hero-photo { min-height: 700px; }
+  .section { padding-inline: max(72px, calc((100vw - 1320px) / 2)); }
+  .hero-copy { padding-left: max(82px, calc((100vw - 1320px) / 2)); }
+}
+@media (max-width: 1100px) {
+  .site-header { padding-inline: 22px; }
+  nav { gap: 12px; }
+  nav a { font-size: 9px; letter-spacing: .8px; }
+  .header-cta { font-size: 9px; padding-inline: 14px; }
+  .hero { min-height: 570px; }
+  .hero-photo { min-height: 570px; }
+  .hero-copy { padding-left: 32px; }
+  .section { padding-inline: 34px; }
+  .about-grid { gap: 28px; }
+  .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feature { min-height: 145px; }
+}
+@media (max-width: 850px) {
+  .site-header { height: 68px; padding-inline: 18px; }
+  nav { top: 67px; gap: 8px; padding: 18px 22px 22px; }
+  nav a { font-size: 11px; }
+  .hero { grid-template-columns: 1fr; min-height: unset; }
+  .hero-copy { padding: 56px 26px 8px; }
+  .hero-photo { min-height: 0; height: min(58vw, 470px); }
+  .hero-photo img { height: 100%; width: 100%; object-fit: contain; }
+  .hero-desc { max-width: 560px; }
+  .section { padding: 52px 26px; }
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .about-image { height: 390px; }
+  .music-showcase { grid-template-columns: .9fr 1.1fr; }
+  .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .contact { grid-template-columns: 1fr 1fr; }
+  .contact-photo { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  html { scroll-padding-top: 64px; }
+  .site-header { height: 64px; padding-inline: 15px; }
+  .brand { font-size: 23px; }
+  .brand small { font-size: 8px; margin-bottom: 5px; }
+  nav { top: 63px; left: 10px; right: 10px; border: 1px solid var(--glass-line); border-radius: 0 0 20px 20px; padding: 16px 20px; }
+  nav a { font-size: 11px; padding: 9px 2px; }
+  .hero-copy { padding: 42px 20px 4px; }
+  .eyebrow { font-size: 9px; letter-spacing: 3px; }
+  .hero h1 { font-size: clamp(54px, 15vw, 78px); margin: 16px 0; }
+  .hero h1 span { letter-spacing: 5px; margin-bottom: 12px; }
+  .welcome-line { font-size: 10px; letter-spacing: 1.5px; line-height: 1.65; margin-bottom: 14px; }
+  .hero-sub { font-size: 32px; margin: 20px 0 10px; }
+  .hero-desc { font-size: 12px; line-height: 1.7; margin-bottom: 18px; }
+  .hero-photo { height: 88vw; max-height: 410px; min-height: 280px; }
+  .section { padding: 42px 18px; }
+  .section-heading { font-size: clamp(34px, 10vw, 42px); }
+  .section-kicker { font-size: 9px; letter-spacing: 2px; }
+  .gold-rule { margin: 12px 0 16px; }
+  .about-grid { grid-template-columns: 1fr; gap: 18px; }
+  .about-copy p { font-size: 12px; line-height: 1.75; margin-bottom: 10px; }
+  .about-image { height: min(112vw, 430px); max-width: none; }
+  .features { grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 20px; }
+  .feature { min-height: 0; padding: 15px 13px; gap: 9px; border-radius: 18px; }
+  .feature-icon { width: 36px; height: 36px; border-radius: 12px; }
+  .feature-icon svg { width: 20px; height: 20px; }
+  .feature b { font-size: 9px; line-height: 1.4; letter-spacing: .55px; }
+  .feature p { font-size: 10px; line-height: 1.55; }
+  .music-showcase { grid-template-columns: 1fr; padding: 10px; gap: 8px; border-radius: 22px; }
+  .music-showcase img { height: min(105vw, 390px); }
+  .music-showcase-copy { padding: 14px 12px 16px; }
+  .music-showcase-copy h3 { font-size: 32px; margin-bottom: 10px; }
+  .music-showcase-copy p { font-size: 12px; line-height: 1.7; }
+  .music-tags { gap: 7px; margin-top: 12px; }
+  .music-tags span { font-size: 9px; padding: 8px 11px; }
+  .gallery-top { gap: 14px; margin-bottom: 18px; }
+  .filters { flex-wrap: wrap; gap: 6px; }
+  .filter { padding: 9px 12px; font-size: 9px; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .media-card { aspect-ratio: 4 / 5; border-radius: 17px; }
+  .contact { grid-template-columns: 1fr; gap: 14px; }
+  .contact h2 { font-size: 36px; margin: 8px 0; }
+  .contact-photo { grid-column: auto; height: 190px; }
+  .contact-data { gap: 8px; font-size: 12px; }
+  .contact-data a { padding: 10px 12px; }
+  footer { padding: 16px 18px; flex-direction: column; gap: 10px; line-height: 1.6; }
+  .admin-launch { right: 10px; bottom: 10px; }
+  .modal { padding: 10px; }
+  .modal-box { padding: 22px 18px; border-radius: 22px; }
+}
+@media (max-width: 380px) {
+  .features { grid-template-columns: 1fr; }
+  .feature { display: grid; grid-template-columns: 38px 1fr; align-items: center; column-gap: 10px; }
+  .feature-icon { grid-row: span 2; }
+  .feature b, .feature p { grid-column: 2; }
+  .gallery-grid { gap: 7px; }
+  .hero h1 { font-size: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+
+/* Hero layout fix + smooth portrait slideshow */
+.hero{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(18px,3vw,48px);align-items:stretch;overflow:hidden}
+.hero-copy{min-width:0;max-width:100%;padding-right:clamp(12px,2vw,32px);z-index:1}
+.hero h1{font-size:clamp(48px,6.2vw,92px);overflow-wrap:normal;word-break:normal;max-width:100%}
+.hero-sub,.hero-desc{max-width:100%;}
+.hero-photo{min-width:0;width:100%;height:100%;min-height:560px;position:relative;overflow:hidden;align-self:stretch;display:block;border-radius:28px 0 0 28px}
+.hero-photo:after{background:linear-gradient(90deg,#08090d 0%,transparent 14%),linear-gradient(0deg,#08090d 0%,transparent 16%);z-index:2}
+.hero-photo .hero-slide{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;opacity:0;transform:scale(1.025);transition:opacity .9s ease,transform 1.4s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 18px 45px #000b);mask-image:linear-gradient(to bottom,#000 91%,transparent 100%);}
+.hero-photo .hero-slide.active{opacity:1;transform:scale(1);z-index:1}
+.hero-slider-controls{position:absolute;z-index:4;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;padding:7px 10px;border:1px solid #ffffff25;border-radius:999px;background:#10111688;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.hero-slider-controls button{color:#f3d38e;background:transparent;border:0;cursor:pointer}
+.hero-prev,.hero-next{width:28px;height:28px;border-radius:50%;font-size:23px;line-height:1;transition:background .25s,transform .25s}
+.hero-prev:hover,.hero-next:hover{background:#ffffff20;transform:scale(1.08)}
+.hero-dots{display:flex;align-items:center;gap:7px}
+.hero-dots button{width:7px;height:7px;padding:0;border-radius:50%;background:#ffffff70;transition:width .3s,background .3s}
+.hero-dots button.active{width:21px;border-radius:8px;background:#e9bf68}
+@media(max-width:1100px) and (min-width:851px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:12px}.hero-copy{padding-left:30px}.hero h1{font-size:clamp(43px,5.7vw,68px)}.hero-photo{min-height:520px}}
+@media(max-width:850px){.hero{grid-template-columns:minmax(0,1fr);gap:0}.hero-copy{padding:48px 26px 12px;max-width:760px}.hero h1{font-size:clamp(52px,10vw,82px)}.hero-photo{height:clamp(350px,72vw,560px);min-height:0;width:100%;border-radius:24px;margin:0 auto;max-width:760px}.hero-photo .hero-slide{object-fit:contain;object-position:center}.hero-photo:after{background:linear-gradient(0deg,#08090d 0%,transparent 18%)}.hero-slider-controls{bottom:14px}}
+@media(max-width:620px){.hero-copy{padding:38px 20px 8px}.hero h1{font-size:clamp(43px,12vw,66px);letter-spacing:0}.hero h1 span{letter-spacing:4px}.hero-photo{height: min(112vw,490px);min-height:320px;border-radius:20px}.hero-slider-controls{bottom:10px}}
+@media(prefers-reduced-motion:reduce){.hero-photo .hero-slide{transition:none}}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><small>NATALIA</small> SAMOKHINA</a>
+  <nav id="nav"><a class="active" href="#home">ГЛАВНАЯ</a><a href="#about">ОБО МНЕ</a><a href="#repertoire">МУЗЫКА</a><a href="#gallery">ГАЛЕРЕЯ</a><a href="#video">ВИДЕО</a><a href="#contacts">КОНТАКТЫ</a></nav>
+  <a class="outline-btn header-cta" href="#contacts">ПРИГЛАСИТЬ НА МЕРОПРИЯТИЕ</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="welcome-line">Добро пожаловать на официальный сайт!</div>
+    <div class="eyebrow">Вокал • музыка • настроение</div>
+    <h1><span>НАТАЛЬЯ</span>САМОХИНА</h1>
+    <div class="hero-sub">Музыка, которая создаёт атмосферу</div>
+    <p class="hero-desc">Яркие музыкальные выступления, искренние эмоции и любимые мелодии для особенных моментов.</p>
+    <a class="gold-btn" href="#contacts">ПРИГЛАСИТЬ НА МЕРОПРИЯТИЕ&nbsp; ›</a>
+  </div>
+  <div class="hero-photo" aria-label="Фотографии Натальи Самохиной">
+    <img class="hero-slide active" src="assets/natalya-hero-new.jpg" alt="Наталья Самохина в синем вечернем платье">
+    <img class="hero-slide" src="assets/natalya-garden.jpg" alt="Наталья Самохина в парке">
+    <img class="hero-slide" src="assets/natalya-stage-kokoshnik.jpg" alt="Наталья Самохина на сцене">
+    <img class="hero-slide" src="assets/natalya-blue-dress.jpg" alt="Наталья Самохина в вечернем образе">
+    <div class="hero-slider-controls" aria-label="Переключение фотографий">
+      <button type="button" class="hero-prev" aria-label="Предыдущее фото">‹</button>
+      <div class="hero-dots"><button class="active" aria-label="Фото 1"></button><button aria-label="Фото 2"></button><button aria-label="Фото 3"></button><button aria-label="Фото 4"></button></div>
+      <button type="button" class="hero-next" aria-label="Следующее фото">›</button>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-copy"><div class="section-kicker">Знакомство</div><h2 class="section-heading">ОБО МНЕ</h2><div class="gold-rule"></div>
+      <p><strong>Наталья Самохина</strong> — певица, для которой сцена становится местом живых эмоций, музыки и общения со зрителями. Её выступления объединяют выразительный вокал, артистизм и искреннюю любовь к музыке.</p>
+      <p>Наталья создаёт особую атмосферу на каждом мероприятии: чувствует настроение зала, легко находит контакт с публикой и наполняет праздник яркими впечатлениями. В её исполнении звучит эстрадная музыка — знакомые мелодии и популярные композиции для самой разной аудитории.</p>
+      <p>Певица выступает на концертах, корпоративах, свадьбах, юбилеях и семейных торжествах. Формат программы можно заранее обсудить и подобрать под характер события.</p>
+      <a class="outline-btn" href="#contacts">ОБСУДИТЬ ВЫСТУПЛЕНИЕ&nbsp; ›</a>
+    </div>
+    <div class="about-image"><img src="assets/natalya-stage-kokoshnik.jpg" alt="Наталья Самохина выступает на сцене в русском сценическом костюме"></div>
+  </div>
+  <div class="features">
+    <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5.5 10.5v1a6.5 6.5 0 0 0 13 0v-1M12 18v3.5M8.5 21.5h7"/></svg></div><b>ЖИВОЙ ВОКАЛ</b><p>Чистый, мощный и выразительный голос, искренние эмоции и энергия живого исполнения.</p></article>
+    <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12.5a3.5 3.5 0 1 1-2-3.16V6l11-2v11.5a3.5 3.5 0 1 1-2-3.16V2z"/></svg></div><b>МУЗЫКАЛЬНАЯ ПАЛИТРА</b><p>Популярные эстрадные композиции, любимые мелодии и песни, знакомые разным поколениям.</p></article>
+    <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 14.7 8l5.8.8-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8-4.2-4.1L9.3 8z"/></svg></div><b>СТИЛЬ И ХАРИЗМА</b><p>Элегантный сценический образ, артистизм и особая атмосфера каждого выступления.</p></article>
+    <article class="feature"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2.5v5M17 2.5v5M3 10h18M8 14h2M14 14h2M8 17.5h2"/></svg></div><b>ЛЮБЫЕ МЕРОПРИЯТИЯ</b><p>Концерты, корпоративы, свадьбы, юбилеи, семейные праздники и торжественные вечера.</p></article>
+  </div>
+</section>
+<section class="section repertoire" id="repertoire">
+  <div class="section-kicker">Музыкальная программа</div><h2 class="section-heading">МУЗЫКА</h2><div class="gold-rule"></div>
+  <div class="music-showcase"><img src="assets/natalya-blue-dress.jpg" alt="Наталья Самохина в синем вечернем платье — сценический образ"><div class="music-showcase-copy"><div class="section-kicker">Настроение каждого события</div><h3>Эстрадная музыка</h3><p>Музыка, которая помогает создать атмосферу праздника, объединяет гостей и делает важные моменты ярче. В исполнении Натальи звучат популярные эстрадные композиции, знакомые мелодии и песни, которые хочется слушать и подпевать.</p><p>Выступление может стать музыкальным украшением камерного семейного вечера, большого торжества или концертной программы. Формат, продолжительность и детали выступления обсуждаются индивидуально.</p><div class="music-tags"><span>Живое исполнение</span><span>Праздничная атмосфера</span><span>Для разных поколений</span></div></div></div>
+</section>
+<section class="section" id="gallery">
+  <div class="gallery-top"><div><div class="section-kicker">Моменты и впечатления</div><h2 class="section-heading">ГАЛЕРЕЯ</h2></div>
+    <div class="filters"><button class="filter active" data-filter="all">ВСЁ</button><button class="filter" data-filter="photo">ФОТО</button><button class="filter" data-filter="video">ВИДЕО</button></div>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="media-card" data-kind="photo" data-src="assets/natalya.jpg"><img src="assets/natalya.jpg" alt="Наталья Самохина — портрет"><span class="play">↗</span></div>
+    <div class="media-card" data-kind="photo" data-src="assets/natalya-garden.jpg"><img src="assets/natalya-garden.jpg" alt="Наталья Самохина в парке"><span class="play">↗</span></div>
+    <div class="media-card" data-kind="photo" data-src="assets/natalya-blue-dress.jpg"><img src="assets/natalya-blue-dress.jpg" alt="Наталья Самохина в вечернем платье"><span class="play">↗</span></div>
+    <div class="media-card" data-kind="photo" data-src="assets/natalya-stage-kokoshnik.jpg"><img src="assets/natalya-stage-kokoshnik.jpg" alt="Наталья Самохина на сцене"><span class="play">↗</span></div>
+  </div>
+</section>
+<section class="section" id="video">
+  <div class="section-kicker">На сцене и за кулисами</div><h2 class="section-heading">ВИДЕО</h2><div class="gold-rule"></div>
+  <p style="max-width:600px;color:var(--muted);font-size:13px;line-height:1.9">Видеозаписи выступлений появятся здесь после добавления через панель управления.</p>
+  <div class="gallery-grid" id="videoGrid"><div class="empty-gallery">Здесь будут размещаться видеозаписи выступлений.<br>Добавить видео можно через панель управления.</div></div>
+</section>
+<section class="section" id="contacts">
+  <div class="contact">
+    <div><div class="section-kicker">Будем на связи</div><h2>ДАВАЙТЕ СОЗДАДИМ ВАШ ПРАЗДНИК!</h2><p>Расскажите о мероприятии — обсудим формат выступления и музыкальную программу.</p></div>
+    <div><div class="contact-data" id="contactData"><span>Контактные данные можно указать в панели управления.</span></div><a class="gold-btn" style="margin-top:22px" href="#" id="contactCta">НАСТРОИТЬ КОНТАКТЫ</a></div>
+    <div class="contact-photo"><img src="assets/natalya-garden.jpg" alt="Наталья Самохина в парке"></div>
+  </div>
+</section>
+</main>
+<footer><span>© <span id="year"></span> Наталья Самохина</span><span>Официальная страница певицы</span></footer>
+<button class="outline-btn admin-launch" id="adminOpen">УПРАВЛЕНИЕ</button>
+<div class="modal" id="adminModal"><div class="modal-box">
+  <button class="close-modal" id="adminClose" aria-label="Закрыть">×</button><h2>Панель управления</h2>
+  <div id="adminLogin">
+    <p>Вход только для администратора сайта.</p>
+    <label class="field"><span>Email администратора</span><input id="adminEmail" type="email" autocomplete="username" placeholder="admin@example.com"></label>
+    <label class="field"><span>Пароль</span><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Пароль"></label>
+    <button class="gold-btn" id="loginButton">ВОЙТИ</button>
+    <p class="hint">Учётную запись администратора нужно один раз создать в панели Supabase. Регистрация посетителей на сайте отключена.</p>
+  </div>
+  <div id="adminTools" hidden>
+    <p>Загружайте фотографии и видео. Они сохраняются в облаке и становятся видны всем посетителям.</p>
+    <label class="field"><span>Выбрать фото или видео (до 50 МБ каждый)</span><input id="mediaInput" type="file" accept="image/*,video/*" multiple></label>
+    <p class="hint">Бесплатный тариф Supabase включает 1 ГБ хранилища и до 50 МБ на файл. Сжимайте длинные видео перед загрузкой.</p>
+    <label class="field"><span>Телефон (необязательно)</span><input id="phoneInput" type="tel" placeholder="+7 ..."></label>
+    <label class="field"><span>Email для связи</span><input id="emailInput" type="email" value="Terra.snow@bk.ru" placeholder="Terra.snow@bk.ru"></label>
+    <div class="modal-actions"><button class="gold-btn" id="saveContacts">СОХРАНИТЬ КОНТАКТЫ</button><button class="outline-btn" id="logoutButton">ВЫЙТИ</button></div>
+    <p class="hint">Удаление файлов доступно в галерее через кнопку удаления, которая появляется только после входа.</p>
+  </div>
+</div></div>
+<div class="lightbox" id="lightbox"><button id="lightboxClose">×</button><div class="lightbox-content" id="lightboxContent"></div></div>
+<div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script>
+const $=s=>document.querySelector(s); const DEFAULT_EMAIL='Terra.snow@bk.ru'; let supabase=null, currentUser=null;
+const toast=(msg)=>{const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200)};
+function configured(){return window.SUPABASE_URL&&window.SUPABASE_ANON_KEY&&!window.SUPABASE_URL.includes('ВСТАВЬТЕ')&&!window.SUPABASE_ANON_KEY.includes('ВСТАВЬТЕ')}
+if(configured()&&window.supabase){supabase=window.supabase.createClient(window.SUPABASE_URL,window.SUPABASE_ANON_KEY)}
+$('#year').textContent=new Date().getFullYear();
+
+// Hero portrait slideshow: starts with the newly supplied blue-dress portrait.
+(()=>{
+  const slides=[...document.querySelectorAll('.hero-photo .hero-slide')];
+  const dots=[...document.querySelectorAll('.hero-dots button')];
+  if(slides.length<2)return;
+  let active=0, timer=null;
+  const show=(index)=>{
+    active=(index+slides.length)%slides.length;
+    slides.forEach((el,i)=>el.classList.toggle('active',i===active));
+    dots.forEach((el,i)=>el.classList.toggle('active',i===active));
+  };
+  const restart=()=>{if(timer)clearInterval(timer);timer=setInterval(()=>show(active+1),5500)};
+  document.querySelector('.hero-prev')?.addEventListener('click',()=>{show(active-1);restart()});
+  document.querySelector('.hero-next')?.addEventListener('click',()=>{show(active+1);restart()});
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>{show(i);restart()}));
+  const hero=document.querySelector('.hero-photo');
+  hero?.addEventListener('mouseenter',()=>{if(timer)clearInterval(timer)});
+  hero?.addEventListener('mouseleave',restart);
+  restart();
+})();
+
+// Плавное появление блоков при прокрутке.
+document.querySelectorAll('.section-heading,.about-copy,.about-image,.feature,.repertoire-card,.gallery-top,.media-card,.contact > *').forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el))}
+$('#menuToggle').onclick=()=>$('#nav').classList.toggle('open');
+$('#nav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;document.querySelectorAll('#galleryGrid .media-card').forEach(c=>c.style.display=f==='all'||c.dataset.kind===f?'':'none')});
+$('#adminOpen').onclick=()=>{if(!supabase){toast('Сначала настройте config.js по инструкции');return}$('#adminModal').classList.add('open');refreshAuth()};
+$('#adminClose').onclick=()=>$('#adminModal').classList.remove('open');
+$('#adminModal').onclick=e=>{if(e.target.id==='adminModal')$('#adminModal').classList.remove('open')};
+function setAdminUI(user){currentUser=user;$('#adminLogin').hidden=!!user;$('#adminTools').hidden=!user;$('#adminOpen').textContent=user?'УПРАВЛЕНИЕ • ВХОД':'УПРАВЛЕНИЕ';}
+async function refreshAuth(){if(!supabase)return;const {data}=await supabase.auth.getSession();setAdminUI(data.session?.user||null);loadContacts();await renderMedia()}
+$('#loginButton').onclick=async()=>{const email=$('#adminEmail').value.trim(),password=$('#adminPassword').value;if(!email||!password){toast('Введите email и пароль');return}const {data,error}=await supabase.auth.signInWithPassword({email,password});if(error){toast('Не удалось войти: проверьте email и пароль');return}setAdminUI(data.user);toast('Вы вошли в панель управления');await renderMedia()};
+$('#logoutButton').onclick=async()=>{await supabase.auth.signOut();setAdminUI(null);toast('Вы вышли из панели')};
+function safeName(name){return name.normalize('NFKD').replace(/[^a-zA-Z0-9._-]/g,'_').slice(-100)||'media'}
+function publicUrl(path){return supabase.storage.from('media').getPublicUrl(path).data.publicUrl}
+function makeCard(item){const isVideo=(item.metadata?.mimetype||item.type||'').startsWith('video/')||/\.(mp4|webm|mov|m4v)$/i.test(item.name);const url=publicUrl(item.name);const card=document.createElement('div');card.className='media-card';card.dataset.kind=isVideo?'video':'photo';card.dataset.src=url;card.dataset.path=item.name;if(isVideo){const v=document.createElement('video');v.src=url;v.muted=true;v.preload='metadata';card.append(v);const p=document.createElement('span');p.className='play';p.textContent='▶';card.append(p)}else{const img=document.createElement('img');img.src=url;img.alt='Фотография Натальи Самохиной';card.append(img)}if(currentUser){const del=document.createElement('button');del.textContent='Удалить';del.style.cssText='position:absolute;z-index:4;right:8px;top:8px;background:#100d07dd;color:#f0d18a;border:1px solid #d6aa4c;padding:7px 10px;font-size:10px;cursor:pointer';del.onclick=async e=>{e.stopPropagation();if(!confirm('Удалить этот файл из галереи?'))return;const {error}=await supabase.storage.from('media').remove([item.name]);if(error){toast('Не удалось удалить файл');return}toast('Файл удалён');await renderMedia()};card.append(del)}return card}
+async function renderMedia(){if(!supabase)return;const grid=$('#galleryGrid'),videos=$('#videoGrid');grid.innerHTML='';videos.innerHTML='';const bundled=[['assets/natalya.jpg','Портрет Натальи Самохиной'],['assets/natalya-garden.jpg','Наталья Самохина в парке'],['assets/natalya-blue-dress.jpg','Наталья Самохина в вечернем платье'],['assets/natalya-stage-kokoshnik.jpg','Наталья Самохина на сцене']];for(const [src,alt] of bundled){const initial=document.createElement('div');initial.className='media-card';initial.dataset.kind='photo';initial.dataset.src=src;const img=document.createElement('img');img.src=src;img.alt=alt;initial.append(img);const play=document.createElement('span');play.className='play';play.textContent='↗';initial.append(play);grid.append(initial)}const {data,error}=await supabase.storage.from('media').list('',{limit:100,sortBy:{column:'created_at',order:'desc'}});if(error){console.warn(error);return}let count=0;for(const item of (data||[])){if(item.name==='.'||item.name==='..')continue;const card=makeCard(item);grid.append(card);if(card.dataset.kind==='video')videos.append(makeCard(item));count++}if(!videos.children.length)videos.innerHTML='<div class="empty-gallery">Видеозаписи появятся здесь после загрузки через панель управления.</div>';document.querySelectorAll('#galleryGrid .media-card,#videoGrid .media-card').forEach(el=>{el.classList.add('reveal','is-visible')});}
+document.addEventListener('click',e=>{const card=e.target.closest('.media-card');if(card&&!e.target.closest('button'))openLightbox(card.dataset.src,card.dataset.kind)});
+function openLightbox(src,kind){const holder=$('#lightboxContent');holder.innerHTML='';const el=document.createElement(kind==='video'?'video':'img');el.src=src;if(kind==='video'){el.controls=true;el.autoplay=true}holder.append(el);$('#lightbox').classList.add('open')}
+$('#lightboxClose').onclick=()=>{$('#lightbox').classList.remove('open');$('#lightboxContent').innerHTML=''};
+$('#mediaInput').onchange=async e=>{const files=[...e.target.files];for(const file of files){if(file.size>50*1024*1024){toast(file.name+' больше 50 МБ — пропущен');continue}if(!file.type.startsWith('image/')&&!file.type.startsWith('video/'))continue;const path=Date.now()+'_'+Math.random().toString(36).slice(2,8)+'_'+safeName(file.name);const {error}=await supabase.storage.from('media').upload(path,file,{cacheControl:'3600',upsert:false,contentType:file.type});if(error){toast('Ошибка загрузки '+file.name);console.error(error)}else toast('Загружено: '+file.name)}e.target.value='';await renderMedia()};
+async function loadContacts(){let c={email:DEFAULT_EMAIL};if(supabase){const {data,error}=await supabase.from('site_settings').select('key,value');if(!error)(data||[]).forEach(x=>c[x.key]=x.value);if(!c.email)c.email=DEFAULT_EMAIL}$('#phoneInput').value=c.phone||'';$('#emailInput').value=c.email||DEFAULT_EMAIL;const box=$('#contactData');box.innerHTML='';if(c.phone){const a=document.createElement('a');a.href='tel:'+c.phone.replace(/[^\d+]/g,'');a.textContent='☎  '+c.phone;box.append(a)}if(c.email){const a=document.createElement('a');a.href='mailto:'+c.email;a.textContent='✉  '+c.email;box.append(a)}$('#contactCta').textContent='СВЯЗАТЬСЯ';$('#contactCta').href=c.phone?'tel:'+c.phone.replace(/[^\d+]/g,''):'mailto:'+c.email}
+$('#saveContacts').onclick=async()=>{for(const [key,value] of [['phone',$('#phoneInput').value.trim()],['email',$('#emailInput').value.trim()]]){const {error}=await supabase.from('site_settings').upsert({key,value},{onConflict:'key'});if(error){toast('Не удалось сохранить контакты');return}}await loadContacts();toast('Контакты сохранены')};
+if(supabase){supabase.auth.onAuthStateChange((_event,session)=>{setAdminUI(session?.user||null)});refreshAuth()}else{ loadContacts(); }
+</script>
+</body></html>
