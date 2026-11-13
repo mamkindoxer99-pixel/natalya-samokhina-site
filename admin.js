@@ -70,6 +70,7 @@
     }
     showDashboard();
     await loadMedia();
+    await loadContactSettings();
     return true;
   }
 
@@ -91,6 +92,7 @@
       $('password').value = '';
       showDashboard();
       await loadMedia();
+      await loadContactSettings();
     } catch (error) {
       loginMessage.textContent = error.message || 'Не удалось войти. Проверьте email и пароль.';
     } finally {
@@ -222,6 +224,40 @@
     uploadCard.classList.remove('dragging');
   }));
   uploadCard.addEventListener('drop', event => uploadFiles(event.dataTransfer.files));
+
+  async function loadContactSettings() {
+    const { data, error } = await supabase.from('site_settings').select('key,value');
+    if (error) { showToast('Не удалось загрузить контакты: ' + error.message); return; }
+    const settings = Object.fromEntries((data || []).map(item => [item.key, item.value]));
+    $('phoneSetting').value = settings.phone || '';
+    $('emailSetting').value = settings.email || 'Terra.snow@bk.ru';
+    $('vkSetting').value = settings.vk || '';
+  }
+
+  $('saveContactSettings').addEventListener('click', async () => {
+    const button = $('saveContactSettings');
+    const vk = $('vkSetting').value.trim();
+    if (vk && !/^https:\/\/(www\.)?vk\.com\//i.test(vk)) {
+      showToast('Укажите полную ссылку вида https://vk.com/...');
+      return;
+    }
+    button.disabled = true;
+    try {
+      for (const [key, value] of [
+        ['phone', $('phoneSetting').value.trim()],
+        ['email', $('emailSetting').value.trim()],
+        ['vk', vk]
+      ]) {
+        const { error } = await supabase.from('site_settings').upsert({ key, value }, { onConflict: 'key' });
+        if (error) throw error;
+      }
+      showToast('Контакты сохранены');
+    } catch (error) {
+      showToast('Не удалось сохранить контакты: ' + (error.message || 'ошибка'));
+    } finally {
+      button.disabled = false;
+    }
+  });
 
   function init() {
     if (!window.SUPABASE_URL || !window.SUPABASE_ANON_KEY ||
